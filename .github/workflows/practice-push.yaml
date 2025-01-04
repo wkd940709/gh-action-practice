@@ -14,12 +14,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install dependancies
+        run: npm ci
       - name: Test
       - run: npm run test
-  run build:
+  build:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install dependancies
+        run: npm ci
       - name: Build
       - run: npm run build
 
