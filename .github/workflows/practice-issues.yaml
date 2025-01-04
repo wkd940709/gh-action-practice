@@ -1,10 +1,10 @@
 name: Practice issues
 on: issues
 jobs:
-  name: echo github context
-  runs on: ubuntu-latest
-  steps:
-    - name: echo github context
-    - run: echo " {{ jsonTo.}}"
+  echo github context:
+    runs on: ubuntu-latest
+    steps:
+      - name: Echo github context
+      - run: echo "hi"
 
   
