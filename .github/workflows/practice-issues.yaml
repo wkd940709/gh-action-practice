@@ -1,7 +1,7 @@
 name: Practice issues
 on: issues
 jobs:
-  echo github context:
+  echo-github-context:
     runs-on: ubuntu-latest
     steps:
       - name: Echo github context
