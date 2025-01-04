@@ -1,0 +1,24 @@
+name: Practice push
+on: push
+jobs:
+  name: run lint
+  runs on: ubuntu-latest
+  steps:
+    - name: run lint
+    - run: npm run lint
+jobs:
+  name: run test
+  runs on: ubuntu-latest
+  needs: run lint
+  steps:
+    - name: run test
+    - run: npm run test
+jobs:
+  name: run build
+  needs: run test
+  runs on: ubuntu-latest
+  steps:
+    - name: run build
+    - run: npm run build
+
+  
